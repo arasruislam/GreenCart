@@ -9,7 +9,7 @@ const Topbar = () => {
    const [selectedCurrency, setSelectedCurrency] = useState("USD");
 
    // language
-   const languages = ["EN", "ES", "FR", "DE", "JP", "IN"];
+   const languages = ["EN", "ES", "FR", "DE", "JP", "BN"];
    const [selectedLanguage, setSelectedLanguage] = useState("EN");
 
    const handleChange = (event) => {
@@ -25,7 +25,7 @@ const Topbar = () => {
    };
 
    return (
-      <div className="border-b font-thin text-[#808080]">
+      <div className="font-thin bg-[#EDF2EE] text-[#2C742F]">
          <Container>
             <div className="flex flex-col md:flex-row items-center justify-between ">
                {/* left side (location) */}
@@ -44,7 +44,7 @@ const Topbar = () => {
                            id="currency-dropdown"
                            value={selectedCurrency}
                            onChange={handleChange}
-                           className="block w-18 px-3 py-2 text-sm focus:outline-none focus:ring-0"
+                           className="block w-18 px-3 py-2 bg-transparent text-sm focus:outline-none focus:ring-0"
                         >
                            {currencies.map((currency, index) => (
                               <option key={index} value={currency}>
@@ -59,7 +59,7 @@ const Topbar = () => {
                            id="language-dropdown"
                            value={selectedLanguage}
                            onChange={handleChange}
-                           className="block w-16 px-3 py-2 text-sm focus:outline-none focus:ring-0"
+                           className="block w-16 px-3 py-2 text-sm bg-transparent focus:outline-none focus:ring-0"
                         >
                            {languages.map((language, index) => (
                               <option key={index} value={language}>
@@ -74,9 +74,13 @@ const Topbar = () => {
                   <span className="mx-4">|</span>
                   {/* Account Item */}
                   <div>
-                     <Link to={"sign_in"}>Sign in</Link>
+                     <Link to={"sign_in"} className="hover:underline">
+                        Sign in
+                     </Link>
                      <span className="mx-2">/</span>
-                     <Link to={"sign_up"}>Sign Up</Link>
+                     <Link to={"sign_up"} className="hover:underline">
+                        Sign Up
+                     </Link>
                   </div>
                </div>
             </div>
