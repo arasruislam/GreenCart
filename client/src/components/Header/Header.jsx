@@ -1,3 +1,4 @@
+import Centerbar from "./Centerbar";
 import Topbar from "./Topbar";
 
 const Header = () => {
@@ -6,8 +7,9 @@ const Header = () => {
          {/* Top */}
          <Topbar />
          {/* Center */}
-
+         <Centerbar />
          {/* Bottom */}
+         
       </header>
    );
 };
