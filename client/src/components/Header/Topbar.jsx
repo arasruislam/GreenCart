@@ -31,7 +31,7 @@ const Topbar = () => {
                {/* left side (location) */}
                <div className="flex items-center gap-1">
                   <PiMapPinLight size={20} />
-                  <p className="">Your Location: Dhaka, Bangladesh</p>
+                  <p className="">Location: Dhaka, Bangladesh</p>
                </div>
 
                {/* right side (select currency, select language, login, singup) */}
