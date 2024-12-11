@@ -3,7 +3,7 @@ import { PiMapPinLight } from "react-icons/pi";
 import { Link } from "react-router";
 import Container from "../Ui/Container";
 
-const Top_Bar = () => {
+const Top_bar = () => {
    // currency
    const currencies = ["USD", "EUR", "GBP", "JPY", "INR", "BDT"];
    const [selectedCurrency, setSelectedCurrency] = useState("USD");
@@ -89,4 +89,4 @@ const Top_Bar = () => {
    );
 };
 
-export default Top_Bar;
+export default Top_bar;

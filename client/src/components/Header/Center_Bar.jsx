@@ -2,14 +2,15 @@ import Badge from "@mui/material/Badge";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
 import logo from "../../assets/logos/Logo.svg";
-import mobileLogo from "../../assets/logos/icon.svg"
+import mobileLogo from "../../assets/logos/icon.svg";
 import Container from "../Ui/Container";
 import Search from "../Ui/Search";
+import Hamburger from "./Hamburger";
 
 const Center_Bar = () => {
-   <div className=" bg-white border-b shadow-sm">
-      <Container>
-         <nav>
+   return (
+      <div className="bg-white">
+         <Container>
             <div className="flex flex-wrap justify-between items-center py-4">
                {/* Logo Section */}
                <div className="flex items-center">
@@ -20,11 +21,14 @@ const Center_Bar = () => {
                      className="sm:w-5/6 lg:w-full hidden sm:block"
                   />
                   {/* Mobile view */}
-                  <img
-                     src={mobileLogo}
-                     alt="GreenCart Logo"
-                     className="sm:w-5/6 lg:w-full flex sm:hidden"
-                  />
+                  <div className="flex items-center justify-center gap-1">
+                     <Hamburger />
+                     <img
+                        src={mobileLogo}
+                        alt="GreenCart Logo"
+                        className="sm:w-5/6 lg:w-full flex sm:hidden"
+                     />
+                  </div>
                </div>
 
                {/* Search Section */}
@@ -33,7 +37,7 @@ const Center_Bar = () => {
                </div>
 
                {/* Icons Section */}
-               <div className="flex items-center space-x-2 mr-3 md:mr-0 ">
+               <div className="flex items-center justify-center space-x-2 mr-3 md:mr-0 ">
                   {/* Favorite Icon */}
                   <div className="text-gray-600 hover:text-green-600 cursor-pointer transition-all border-r pr-2">
                      <AiOutlineHeart className="size-7" />
@@ -55,9 +59,9 @@ const Center_Bar = () => {
                   <Search />
                </div>
             </div>
-         </nav>
-      </Container>
-   </div>;
+         </Container>
+      </div>
+   );
 };
 
 export default Center_Bar;
