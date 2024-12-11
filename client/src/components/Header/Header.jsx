@@ -1,15 +1,14 @@
-import Centerbar from "./Centerbar";
-import Topbar from "./Topbar";
+import Center_Bar from "./Center_Bar";
+import Top_Bar from "./Top_Bar";
 
 const Header = () => {
    return (
       <header>
          {/* Top */}
-         <Topbar />
+         <Top_Bar />
          {/* Center */}
-         <Centerbar />
+         <Center_Bar />
          {/* Bottom */}
-         
       </header>
    );
 };
